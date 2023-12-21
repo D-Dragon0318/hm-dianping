@@ -1,21 +1,19 @@
 package com.hmdp;
 
+import com.hmdp.service.impl.ShopServiceImpl;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.RedisTemplate;
+
+import javax.annotation.Resource;
 
 @SpringBootTest
 class HmDianPingApplicationTests {
 
-    @Autowired
-    private RedisTemplate redisTemplate;
+    @Resource
+    private ShopServiceImpl shopService;
 
     @Test
-    void testString() {
-        redisTemplate.opsForValue().set("name1", "zhangsan");
-        Object name1 = redisTemplate.opsForValue().get("name1");
-        System.out.println("name1 = "+name1);
+    void testSaveShop() throws InterruptedException {
+        shopService.saveShop2Redis(1L,10L);
     }
 }
