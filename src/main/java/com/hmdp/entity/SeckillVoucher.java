@@ -19,8 +19,12 @@ import java.time.LocalDateTime;
  * @since 2022-01-04
  */
 @Data
+//不调用父类的equals()和hashCode()方法
 @EqualsAndHashCode(callSuper = false)
+//该注解用于生成getter和setter方法
+//chain = true，表示在getter和setter方法之间使用链式调用。
 @Accessors(chain = true)
+//用于指定实体类对应的数据库表名
 @TableName("tb_seckill_voucher")
 public class SeckillVoucher implements Serializable {
 
