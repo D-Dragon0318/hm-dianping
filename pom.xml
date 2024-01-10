@@ -67,6 +67,14 @@
             <artifactId>hutool-all</artifactId>
             <version>5.7.17</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.8</version>
+            <scope>runtime</scope>
+        </dependency>
+
         <!--jedis-->
         <dependency>
             <groupId>redis.clients</groupId>
