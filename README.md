@@ -21,3 +21,5 @@ NOGROUP No such key 'stream.orders' or consumer group 'g1' in XREADGROUP with GR
 ```text
 XGROUP CREATE stream.orders g1 $ MKSTREAM
 ```
+
+2024-01-10 ：将gitee上的项目设置同步更新到github
